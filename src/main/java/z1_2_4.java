@@ -1,4 +1,4 @@
-public class pz1_2_4 {
+public class z1_2_4 {
     public static void main(String[] args) {
         boolean varBoolean = false;
         byte varByte = 5;

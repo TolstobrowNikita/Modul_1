@@ -4,22 +4,37 @@ public class z1_5_4 {
 
     public static class Main {
         public static void main(String[] args) {
-            int[] input = {1,3,5,6,9,11,24};
+            int[] numbers = {1, 3, 5, 6, 9, 11, 24};
             int start = 4;
             int end = 10;
-            System.out.println(Arrays.toString(getSubArrayBetween(input, start, end)));
-        }
+            int[] result = getSubArrayBetween(numbers, start, end);
 
-        public static int[] getSubArrayBetween(int[] numbers, int start, int end) {
-            int[] result = new int[end - start + 1];
-            int index = 0;
-            for (int i = end; i <= start; i++) {
-                result[index++] = numbers[i];
+            System.out.println("Пример вывода:");
+            for (int i = 0; i < result.length; i++) {
+                System.out.println(result[i]);
             }
-            return result;
         }
     }
+
+    public static int[] getSubArrayBetween(int[] numbers, int start, int end) {
+        int elementsCount = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] >= start && numbers[i] <= end) {
+                elementsCount++;
+            }
+        }
+        int indexToInsert = 0;
+        int[] result = new int[elementsCount];
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] >= start && numbers[i] <= end) {
+                result[indexToInsert] = numbers[i];
+                indexToInsert++;
+            }
+        }
+        return result;
+    }
 }
+
 
 
 

@@ -7,7 +7,7 @@ public class z1_5_7 {
                 int[] a = {1, 3, 7, 5};
                 int[] b = {8, 4, 2, 4};
                 int[] result = mergeAndSort(a, b);
-                System.out.println("Пример вывода: " + Arrays.toString(result));
+                System.out.println(Arrays.toString(result));
             }
 
 
